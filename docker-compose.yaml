@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+
+  pg-db:  # new
+    build:
+      context: ./postgres
+      dockerfile: Dockerfile
+    ports:
+      - 5435:5432
+    tty: true
+    container_name: pg_serve
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres2
+    volumes:
+      - "./_data:/var/lib/postgresql/data"

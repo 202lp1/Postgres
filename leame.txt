@@ -1,0 +1,14 @@
+Then run command below
+
+$ docker-compose up --build 
+or
+ctr+c to down container
+
+$ docker-compose up -d
+$ docker-compose down
+
+
+How to use
+You can edit main.go at local or docker container 
+
+docker exec -it pg_serve sh
